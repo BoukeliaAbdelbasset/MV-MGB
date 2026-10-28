@@ -1,0 +1,36 @@
+{
+  "model_name": "MV-MGB (Multi-View Meta-Gradient Boosting)",
+  "target_dataset": "Creux Dataset 1 (13 ncRNA families)",
+  "training_samples": 6320,
+  "test_samples": 2253,
+  "num_classes": 13,
+  "classes": [
+    "5S_rRNA",
+    "5_8S_rRNA",
+    "CD-box",
+    "HACA-box",
+    "IRES",
+    "Intron_gpI",
+    "Intron_gpII",
+    "leader",
+    "miRNA",
+    "riboswitch",
+    "ribozyme",
+    "scaRNA",
+    "tRNA"
+  ],
+  "metrics": {
+    "accuracy": 0.9565,
+    "weighted_f1": 0.9564,
+    "macro_f1": 0.9577,
+    "mcc": 0.9528
+  },
+  "feature_views": {
+    "view1": "Sublinear TF-IDF 3-8 ngrams (35,000D)",
+    "view2": "Natural Vectors (21D)",
+    "view3": "Biophysical Structural Fingerprints (22D)",
+    "view4": "Turner Stacking B-Splines (60D)"
+  },
+  "meta_learner": "HistGradientBoostingClassifier (52D simplex)",
+  "version": "1.0.0"
+}

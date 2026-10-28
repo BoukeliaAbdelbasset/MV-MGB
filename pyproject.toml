@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mvmgb"
+version = "1.0.0"
+authors = [
+  { name="Rabah Lebsir", email="rabah.lebsir@univ-guelma.dz" },
+  { name="Abdelbasset Boukelia", email="a.boukelia@crbt.dz" },
+]
+description = "Multi-View Meta-Gradient Boosting for Non-Coding RNA Classification"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.23.0",
+    "scipy>=1.9.0",
+    "pandas>=1.5.0",
+    "scikit-learn>=1.2.0",
+    "biopython>=1.80",
+    "joblib>=1.2.0",
+    "matplotlib>=3.6.0",
+    "seaborn>=0.12.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BoukeliaAbdelbasset/MV-MGB"
+"Repository" = "https://github.com/BoukeliaAbdelbasset/MV-MGB"
+"Bug Tracker" = "https://github.com/BoukeliaAbdelbasset/MV-MGB/issues"
+"Zenodo" = "https://zenodo.org/records/23724491"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
